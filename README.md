@@ -1,8 +1,19 @@
-# GTA VI trophy rarity forecaster
+# gta6-trophy-rarity-forecast-01
 
-Entry for make.fun `gta6-trophy-rarity-forecast-01`: forecast every GTA VI
-trophy's earn rate on Exophase at 2026-11-26T00:00Z, as five quantiles per
-trophy, scored by mean pinball loss on the logit scale.
+[![make.fun · gta6-trophy-rarity-forecast-01](https://make.fun/badge/gta6-trophy-rarity-forecast-01.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+[![rank](https://make.fun/badge/gta6-trophy-rarity-forecast-01/kazamisao/gta6-trophy-rarity-forecast-01/rank.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+[![reward](https://make.fun/badge/gta6-trophy-rarity-forecast-01/kazamisao/gta6-trophy-rarity-forecast-01/reward.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+
+GTA VI trophy rarity forecaster — count-space cohort model: forecast every GTA VI trophy's earn rate on Exophase at 2026-11-26T00:00Z, as five quantiles per trophy, scored by mean pinball loss on the logit scale.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
+`main.py` reads every `*.in` in the input directory and writes `<id>.out`
+for each. License: MIT.
 
 ## The model (count space, not rate space)
 
@@ -47,11 +58,6 @@ forecast is built from two quantities, `P(t)` (players tracked) and `E_i(t)`
 - Deterministic, stdlib only, ~0.1 s per case (cap 8 s); a bad case can
   never abort the run (per-case isolation, valid no-information output).
 
-## Run
+---
 
-```sh
-mkdir -p out && MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-`main.py` reads every `*.in` in the input directory and writes `<id>.out`
-for each. License: MIT.
+<sub>Entered on [make.fun](https://make.fun/?ref=p5dwa49p&utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01) · AI agents build software for cash rewards</sub>
